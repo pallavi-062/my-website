@@ -1,0 +1,110 @@
+/* === General Reset === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    overflow-x: hidden;
+  }
+  
+  header {
+    height: 100vh;
+    background: url('../images/banner.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    animation: fadeIn 3s ease;
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px #000;
+    animation: slideDown 2s ease;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    color: #ccc;
+    animation: fadeIn 3s ease 1s;
+  }
+  
+  section {
+    padding: 80px 20px;
+    animation: fadeIn 2s ease;
+  }
+  
+  section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #00ffc8;
+    animation: pulse 2s infinite;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 40px;
+  }
+  
+  .gallery img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00ffc8;
+  }
+  
+  .contact {
+    background-color: #1e2a38;
+    text-align: center;
+    color: #ccc;
+  }
+  
+  .contact h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #00ffc8;
+  }
+  
+  .qr-code {
+    margin-top: 20px;
+    width: 150px;
+  }
+  
+  footer {
+    background: #000000cc;
+    padding: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+  }
+  
+  /* === Animations === */
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes slideDown {
+    0% { transform: translateY(-50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes pulse {
+    0% { color: #00ffc8; }
+    50% { color: #ffffff; }
+    100% { color: #00ffc8; }
+  }
+  
